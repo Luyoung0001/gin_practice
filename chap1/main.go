@@ -20,7 +20,6 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("http server failed:%V", err)
 		return
 	}
-
 }
 func main() {
 	http.HandleFunc("/hello", sayHello)
