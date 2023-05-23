@@ -10,9 +10,8 @@ func main() {
 	r.LoadHTMLFiles("/Users/luliang/GoLand/gin_practice/chap4/index.tmpl")
 	r.GET("/index", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.tmpl", gin.H{
-			"title": "你好:www.baidu.com",
+			"title": "你好,前端真是太有意思了!",
 		})
-
 	})
 	r.Run(":9091")
 }
