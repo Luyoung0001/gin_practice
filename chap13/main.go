@@ -61,6 +61,7 @@ func main() {
 	})
 	// 路由组的概念
 	// 把公用的前缀提取出来,创建一个路由组
+	// 路由组是可以嵌套定义的,也就说,路由组的定义是递归的
 	videoGroup := r.Group("/video")
 	{
 		videoGroup.GET("/index", func(c *gin.Context) {
