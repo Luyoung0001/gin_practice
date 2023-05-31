@@ -5,6 +5,7 @@ import (
 	"net/http"
 )
 
+// 参数绑定
 func main() {
 	type user struct {
 		Username string `form:"username" json:"uname"`
