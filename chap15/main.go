@@ -33,12 +33,12 @@ func main() {
 	// 自动迁移,本质上就是把结构体映射成 table
 	db.AutoMigrate(&UserInfo{})
 
-	//u1 := UserInfo{1, "七米", "男", "篮球"}
-	//u2 := UserInfo{2, "沙河娜扎", "女", "足球"}
+	u1 := UserInfo{1, "七米", "男", "篮球"}
+	u2 := UserInfo{2, "沙河娜扎", "女", "足球"}
 
 	// 创建记录
-	//db.Create(&u1)
-	//db.Create(&u2)
+	db.Create(&u1)
+	db.Create(&u2)
 	// 更新
 	var u UserInfo
 	db.First(&u)
